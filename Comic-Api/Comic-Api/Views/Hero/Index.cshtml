@@ -1,0 +1,22 @@
+﻿@model List<Hero>
+
+@using (Html.BeginForm("Search", "Hero", FormMethod.Post))
+{
+	<input type="text" name="query" />
+	<button type="submit">Search</button>
+}
+
+@if (Model != null && Model.Any())
+{
+	<h2>Search Results</h2>
+	<ul>
+		@foreach (var hero in Model)
+		{
+			<li>@hero.name - @hero.id</li>
+		}
+	</ul>
+}
+else
+{
+	<p>@ViewBag.ErrorMessage</p>
+}

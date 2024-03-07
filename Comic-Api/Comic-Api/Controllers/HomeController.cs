@@ -8,37 +8,37 @@ namespace Comic_Api.Controllers
     {
         public IActionResult Index()
         {
-            Main();
+            //Main();
             return View();
         }
 
 
-        static async Task Main()
-        {
-            string sUrl = AppDomain.CurrentDomain.BaseDirectory;
+        //static async Task Main()
+        //{
+        //    string sUrl = AppDomain.CurrentDomain.BaseDirectory;
 
-            HttpClient client = new HttpClient();
+        //    HttpClient client = new HttpClient();
 
-            string sAPIUrl = "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json";
+        //    string sAPIUrl = "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json";
 
-            string sHero = await client.GetStringAsync(sAPIUrl);
+        //    string sHero = await client.GetStringAsync(sAPIUrl);
 
-            List<Hero> heroes = JsonSerializer.Deserialize<List<Hero>>(sHero);
+        //    List<Hero> heroes = JsonSerializer.Deserialize<List<Hero>>(sHero);
 
-            // Write the list to a JSON file
-            string jsonFilePath = "heroes.json";
-            await WriteToJsonFile(jsonFilePath, heroes);
+        //    // Write the list to a JSON file
+        //    string jsonFilePath = "heroes.json";
+        //    await WriteToJsonFile(jsonFilePath, heroes);
 
-            Console.WriteLine("JSON file has been created successfully.");
-        }
+        //    Console.WriteLine("JSON file has been created successfully.");
+        //}
 
-        static async Task WriteToJsonFile<T>(string filePath, T data)
-        {
-            using (StreamWriter sw = new StreamWriter(filePath))
-            {
-                await JsonSerializer.SerializeAsync(sw.BaseStream, data);
-            }
-        }
+        //static async Task WriteToJsonFile<T>(string filePath, T data)
+        //{
+        //    using (StreamWriter sw = new StreamWriter(filePath))
+        //    {
+        //        await JsonSerializer.SerializeAsync(sw.BaseStream, data);
+        //    }
+        //}
 
     }
 }
