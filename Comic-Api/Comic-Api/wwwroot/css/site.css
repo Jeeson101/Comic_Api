@@ -20,3 +20,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.col-md-4
+{
+    display: flex;
+    justify-content: center;
+}
+
+.text-muted
+{
+    padding: 30px;
+
+}

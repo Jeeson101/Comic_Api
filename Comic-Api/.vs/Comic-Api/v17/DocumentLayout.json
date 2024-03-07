@@ -1,12 +1,71 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jason\\Downloads\\Programming app software\\Comic-Api\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Comic-Api\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Comic-Api\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB8AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-07T14:06:38.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Comic-Api\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Comic-Api\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-07T14:02:50.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Comic-Api\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Comic-Api\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-07T13:56:06.194Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
