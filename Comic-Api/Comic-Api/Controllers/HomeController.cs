@@ -1,32 +1,44 @@
-using Comic_Api.Models;
+﻿using Comic_Api.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using System.Text.Json;
 
 namespace Comic_Api.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
+            Main();
             return View();
         }
 
-        public IActionResult Privacy()
+
+        static async Task Main()
         {
-            return View();
+            string sUrl = AppDomain.CurrentDomain.BaseDirectory;
+
+            HttpClient client = new HttpClient();
+
+            string sAPIUrl = "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json";
+
+            string sHero = await client.GetStringAsync(sAPIUrl);
+
+            List<Hero> heroes = JsonSerializer.Deserialize<List<Hero>>(sHero);
+
+            // Write the list to a JSON file
+            string jsonFilePath = "heroes.json";
+            await WriteToJsonFile(jsonFilePath, heroes);
+
+            Console.WriteLine("JSON file has been created successfully.");
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        static async Task WriteToJsonFile<T>(string filePath, T data)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            using (StreamWriter sw = new StreamWriter(filePath))
+            {
+                await JsonSerializer.SerializeAsync(sw.BaseStream, data);
+            }
         }
+
     }
 }
