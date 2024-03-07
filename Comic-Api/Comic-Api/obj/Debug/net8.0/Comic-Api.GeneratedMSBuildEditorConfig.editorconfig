@@ -18,12 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\milan\OneDrive\Documents\GitHub\Comic_Api\Comic-Api\Comic-Api
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/ComicVine/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29taWNWaW5lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Shared/Error.cshtml]
