@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\controllers\\herocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\controllers\\herocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\views\\hero\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\views\\hero\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\views\\hero\\searchpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\views\\hero\\searchpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\views\\hero\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\views\\hero\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\models\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\models\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\models\\work.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\models\\work.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|c:\\users\\jason\\downloads\\github\\comic_api\\comic-api\\comic-api\\controllers\\herocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E7B80EF-002B-47F0-A5B9-60FC5BD08C38}|Comic-Api\\Comic-Api.csproj|solutionrelative:comic-api\\controllers\\herocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,33 +34,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Hero\\Index.cshtml",
-              "RelativeDocumentMoniker": "Comic-Api\\Views\\Hero\\Index.cshtml",
-              "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Hero\\Index.cshtml",
-              "RelativeToolTip": "Comic-Api\\Views\\Hero\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-07T15:03:29.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Comic-Api\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Comic-Api\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABcAAAAdAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACMAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-07T14:53:46.008Z",
+              "WhenOpened": "2024-03-08T22:38:57.482Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Comic-Api\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Comic-Api\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAowBoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-08T22:34:56.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SearchPartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Hero\\SearchPartialView.cshtml",
+              "RelativeDocumentMoniker": "Comic-Api\\Views\\Hero\\SearchPartialView.cshtml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Hero\\SearchPartialView.cshtml",
+              "RelativeToolTip": "Comic-Api\\Views\\Hero\\SearchPartialView.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-08T21:58:26.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Comic-Api\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Comic-Api\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T12:28:10.119Z"
             },
             {
               "$type": "Document",
@@ -70,49 +95,22 @@
               "RelativeDocumentMoniker": "Comic-Api\\Views\\Hero\\Search.cshtml",
               "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Views\\Hero\\Search.cshtml",
               "RelativeToolTip": "Comic-Api\\Views\\Hero\\Search.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAowAwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-07T14:50:30.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "HeroController.cs",
               "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Controllers\\HeroController.cs",
               "RelativeDocumentMoniker": "Comic-Api\\Controllers\\HeroController.cs",
               "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Controllers\\HeroController.cs",
               "RelativeToolTip": "Comic-Api\\Controllers\\HeroController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAA2wB8AAAAUAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAqwCQAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T14:47:16.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Work.cs",
-              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Models\\Work.cs",
-              "RelativeDocumentMoniker": "Comic-Api\\Models\\Work.cs",
-              "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Models\\Work.cs",
-              "RelativeToolTip": "Comic-Api\\Models\\Work.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T13:35:03.809Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Hero.cs",
-              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Models\\Hero.cs",
-              "RelativeDocumentMoniker": "Comic-Api\\Models\\Hero.cs",
-              "ToolTip": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Models\\Hero.cs",
-              "RelativeToolTip": "Comic-Api\\Models\\Hero.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T13:28:06.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T14:47:16.731Z"
             }
           ]
         }

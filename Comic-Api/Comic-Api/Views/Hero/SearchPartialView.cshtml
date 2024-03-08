@@ -1,0 +1,29 @@
+﻿@model Hero
+
+<div class="container">
+	<h2>@Model.name</h2>
+	<p>ID: @Model.id</p>
+	<p>Slug: @Model.slug</p>
+
+	<h3>Powerstats</h3>
+	<ul>
+		<li><strong>Intelligence:</strong> @Model.powerstats.intelligence</li>
+		<li><strong>Strength:</strong> @Model.powerstats.strength</li>
+		<li><strong>Speed:</strong> @Model.powerstats.speed</li>
+		<li><strong>Durability:</strong> @Model.powerstats.durability</li>
+		<li><strong>Power:</strong> @Model.powerstats.power</li>
+		<li><strong>Combat:</strong> @Model.powerstats.combat</li>
+	</ul>
+
+	<h3>Appearance</h3>
+	<p>Gender: @Model.appearance.gender</p>
+	<p>Race: @Model.appearance.race</p>
+	<!-- Add other appearance properties as needed -->
+
+	<h3>Biography</h3>
+	<p>Full Name: @Model.biography.fullName</p>
+	<p>Alter Egos: @Model.biography.alterEgos</p>
+	<!-- Add other biography properties as needed -->
+
+	<!-- Add other sections for Work, Connections, Images, etc. -->
+</div>

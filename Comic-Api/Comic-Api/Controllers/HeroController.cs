@@ -24,24 +24,35 @@ namespace Comic_Api.Controllers
 			return View();
 		}
 
-
-
-		[HttpPost]
+		[HttpGet]
 		public ActionResult Search(string query)
 		{
-			// Perform search
-			var results = heroes.FindAll(h => h.name.Contains(query));
+			List<Hero> results = new List<Hero>(); // Initialize a list to hold the search results
+
+			if (!string.IsNullOrEmpty(query))
+			{
+				results = heroes.Where(h => h.name.Contains(query)).ToList();
+			}
+
+			return View(results);
+		}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult SearchPost(string query)
+		{
+			var results = heroes.Where(h => h.name == (query.ToLower())).ToList();
 
 			if (results.Any())
 			{
-				return View(results);
+				return View("Search", results);
 			}
 			else if (!string.IsNullOrEmpty(query))
 			{
 				ViewBag.ErrorMessage = "No results found.";
 			}
 
-			return View();
+			return View("Search");
 		}
 	}
 }

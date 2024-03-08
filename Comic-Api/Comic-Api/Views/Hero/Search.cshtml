@@ -1,1 +1,22 @@
-﻿
+﻿@model List<Hero>
+
+@using (Html.BeginForm("SearchPost", "Hero", FormMethod.Post))
+{
+	<input type="text" name="query" />
+	<button type="submit">Search Hero</button>
+}
+
+@if (Model != null && Model.Any())
+{
+	@foreach (var hero in Model)
+	{
+		//create a design with a block centered in the middle only the design everything else is in the partial view use the partial view to display the hero
+
+
+		<partial name="SearchPartialView" model="hero"/>
+	}
+}
+else
+{
+	<p>@ViewBag.ErrorMessage</p>
+}
