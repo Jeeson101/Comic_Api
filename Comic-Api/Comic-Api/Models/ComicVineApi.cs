@@ -3,15 +3,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Comic_Api.NietTeGebruiken
+namespace Comic_Api.Models
 {
     public class ComicVineApi
     {
         private readonly HttpClient _httpClient = new HttpClient();
         private readonly string _apiKey = "f48d928b4451f3591799d571b6abb87f88081c69";
         public string OneLongAssString { get; set; } = "";
-
-
 
         public async Task<string> GetComicsByNameAsync(string name)
         {
@@ -30,26 +28,22 @@ namespace Comic_Api.NietTeGebruiken
             return await response.Content.ReadAsStringAsync();
         }
 
-        public async void SearchHero(string heroName)
+        public async Task<string> SearchHero(string heroName)
         {
-            var volumesJson = await GetComicsByNameAsync(heroName);
-
-            var xmlResponse = XDocument.Parse(volumesJson);
-
-            // Extract relevant information
-            var volumeElements = xmlResponse.Descendants("volume");
-
-            foreach (var volumeElement in volumeElements)
-            {
-                var volumeId = volumeElement.Element("id")?.Value;
-                var volumeName = volumeElement.Element("name")?.Value;
-                var volumeDescription = volumeElement.Element("description")?.Value;
-
-                Console.WriteLine($"Volume ID: {volumeId}, Name: {volumeName}, Description: {volumeDescription}");
-                OneLongAssString += "ID: " + volumeId + Environment.NewLine + "Volume name: " + volumeName +
-                                   Environment.NewLine + "Volume Description" + volumeDescription + Environment.NewLine;
-            }
+	        try
+	        {
+		        var client = new ComicVineApi();
+		        var result = await client.GetComicsByNameAsync(heroName);
+		        Console.WriteLine(result); // Print the JSON result
+		        return result;
+	        }
+	        catch (Exception ex)
+	        {
+		        Console.WriteLine($"An error occurred: {ex.Message}");
+		        return null;
+	        }
         }
+
 
         //static async Task Main(string[] args)
         //{

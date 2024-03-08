@@ -11,10 +11,6 @@ namespace Comic_Api.Ui.Mvc.Controllers
              return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
         
     }
 }
