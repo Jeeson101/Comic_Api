@@ -19,49 +19,110 @@ html {
 
 body {
     background-color: black;
-    color: purple;
+    color: white;
 }
 
-.navbar-brand
-{
-    color: purple;
+.col-md-6{
+    width: auto;
 }
 
-.navbar {
-    background-color: black;
-}
-
-.navbar-collapse > ul > li > a
-{
-    color: purple;
-}
-
-.container {
-    margin-top: 50px;
-    background-color: black;
-    border: 2px solid purple;
-    padding: 20px;
+.containerHero {
+    background-color: #222;
+    border: 2px solid #603FEF;
     border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
 }
 
-    .container h2 {
-        color: purple;
+    .containerHero h2 {
+        color: #603FEF;
+        text-transform: capitalize;
+        margin-bottom: 20px;
     }
 
-    .container ul {
-        padding-left: 0;
+.containerTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerBiography {
+    margin-bottom: 30px;
+}
+
+    .containerBiography h3 {
+        color: #603FEF;
+        margin-top: 0;
+        margin-bottom: 15px;
     }
 
-        .container ul li {
-            list-style: none;
-            margin-bottom: 5px;
-        }
+    .containerBiography p {
+        margin: 5px 0;
+    }
 
-            .container ul li strong {
-                font-weight: bold;
-            }
+    .containerBiography h4 {
+        color: #603FEF;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
 
- footer
- {
-     color: purple;
- }
+    .containerBiography ul {
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    .containerBiography li {
+        margin-bottom: 5px;
+    }
+
+
+.containerRightSide{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.containerAppearence {
+    text-align: right;
+    padding: 20px;
+}
+
+    .containerAppearence h4 {
+        color: #603FEF;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .containerAppearence p {
+        margin-bottom: 5px;
+    }
+
+.CointainerPowerstats {
+    width: auto;
+}
+
+    .CointainerPowerstats h3 {
+        color: #603FEF;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .CointainerPowerstats ul {
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    .CointainerPowerstats li {
+        margin-bottom: 5px;
+    }
+
+.progress-bar {
+    border: 1px solid black;
+}
+
+.progress
+{
+    width: 500px;
+}
+
+footer {
+    color: #603FEF;
+}
