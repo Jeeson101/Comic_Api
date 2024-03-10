@@ -1,5 +1,12 @@
 ﻿@model List<Hero>
 
+@if (ViewBag.ErrorMessage != null)
+{
+	<div class="alert alert-danger" role="alert">
+		@ViewBag.ErrorMessage
+	</div>
+}
+
 @using (Html.BeginForm("SearchPost", "Hero", FormMethod.Post))
 {
 	<input type="text" name="query" />

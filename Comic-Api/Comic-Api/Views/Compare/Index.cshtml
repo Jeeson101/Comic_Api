@@ -1,0 +1,21 @@
+﻿@model List<Hero>
+
+
+
+<div class="compareContainers">
+	<div class="containerSearch">
+		@using (Html.BeginForm("Index", "Hero", FormMethod.Post))
+		{
+			<input type="text" name="query" />
+			<button type="submit">Search Hero</button>
+		}
+	</div>
+
+	<div class="containerSearch">
+		@using (Html.BeginForm("Index", "Hero", FormMethod.Post))
+		{
+			<input type="text" name="query" />
+			<button type="submit">Search Hero</button>
+		}
+	</div>
+</div>

@@ -54,7 +54,7 @@
 
 				<div class="mb-3">
 					<div class="d-flex justify-content-between align-items-center">
-						<div><strong>@statName</strong></div>
+						<div><strong>@statName.First().ToString().ToUpper()@statName.Substring(1)</strong></div>
 						<div><strong>@statValue</strong></div>
 					</div>
 					<div class="progress">
@@ -65,11 +65,9 @@
 			}
 
 			@functions {
-
 				string GetColorForStat(string statName)
 				{
 					switch (statName)
-
 					{
 						case "intelligence": return "info";
 						case "strength": return "danger";
@@ -79,11 +77,11 @@
 						case "combat": return "secondary";
 						default: return "dark";
 					}
-
 				}
-
 			}
-
+		</div>
+		<div class="buttonCompare">
+			<button type="submit">Compare</button>
 		</div>
 	</div>
 </div>
