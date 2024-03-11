@@ -5,19 +5,32 @@ namespace Comic_Api.Controllers;
 
 public class ComicVineController : Controller
 {
-    // GET
-    [HttpGet]
-    public IActionResult Index()
-    {
-        return View();
-    }
+	private readonly ComicVineApi _comicVineApi = new ComicVineApi();
 
-    [HttpPost, ValidateAntiForgeryToken]
-    public ActionResult index(SuperHeroName sn)
-    {
-        ComicVineApi api = new ComicVineApi();
-       String s = api.SearchHero(sn.naam).ToString();
-       sn.naam = s;
-       return View(sn);
-    }
+	public ActionResult Index()
+	{
+		return View();
+	}
+
+	[HttpPost, ValidateAntiForgeryToken]
+	public async Task<ActionResult> Index(string heroName)
+	{
+		if (string.IsNullOrEmpty(heroName))
+		{
+			ViewBag.Error = "Please enter a superhero name.";
+			return View();
+		}
+
+		try
+		{
+			var result = await _comicVineApi.SearchHero(heroName);
+			ViewBag.Result = result;
+		}
+		catch (Exception ex)
+		{
+			ViewBag.Error = $"An error occurred: {ex.Message}";
+		}
+
+		return View();
+	}
 }

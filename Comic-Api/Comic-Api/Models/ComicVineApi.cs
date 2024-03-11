@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static System.Net.WebRequestMethods;
 
 namespace Comic_Api.Models
 {
@@ -13,7 +14,8 @@ namespace Comic_Api.Models
 
         public async Task<string> GetComicsByNameAsync(string name)
         {
-            var url = $"https://comicvine.gamespot.com/api/volumes/?api_key={_apiKey}&filter=name:{name}";
+			//var url = $"https://comicvine.gamespot.com/api/volumes/?api_key={_apiKey}&filter=name:{name}";
+			var url = "https://comicvine.gamespot.com/api/volumes/?api_key=f48d928b4451f3591799d571b6abb87f88081c69&filter=name:batman&limit=1";
 
             var request = new HttpRequestMessage(HttpMethod.Get, url);
             request.Headers.Add("User-Agent", "MyComicApp1.0");
@@ -32,8 +34,7 @@ namespace Comic_Api.Models
         {
 	        try
 	        {
-		        var client = new ComicVineApi();
-		        var result = await client.GetComicsByNameAsync(heroName);
+		        var result = await GetComicsByNameAsync(heroName);
 		        Console.WriteLine(result); // Print the JSON result
 		        return result;
 	        }
@@ -43,6 +44,7 @@ namespace Comic_Api.Models
 		        return null;
 	        }
         }
+
 
 
         //static async Task Main(string[] args)

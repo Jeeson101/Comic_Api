@@ -1,20 +1,26 @@
-﻿@model SuperHeroName
+﻿@{
+	ViewBag.Title = "Search Superhero";
+}
 
-<div class="container">
-	<h1>Superhero Search</h1>
-	<div class="row">
-		<div class="col-md-6">
-			<form method="post">
-				<div class="form-group">
-					<label for="Superhero">Enter the superhero you want to search for</label>
-					<input asp-for="naam" type="text" class="form-control" id="Superhero" placeholder="Example: Batman">
-				</div>
-				<button type="submit" class="btn btn-primary">Search</button>
-			</form>
-		</div>
-	</div>
-</div>
-@if (@Model != null && @Model.naam != "" && @Model.naam != " ")
+<h2>Search Superhero</h2>
+
+@using (Html.BeginForm())
 {
-	<p>@Model.naam</p>
+	<div class="form-group">
+		@Html.Label("Superhero Name:")
+		@Html.TextBox("heroName", null, new { @class = "form-control" })
+		@Html.ValidationMessage("heroName")
+	</div>
+
+	<button type="submit" class="btn btn-primary">Search</button>
+}
+
+@if (ViewBag.Error != null)
+{
+	<div class="alert alert-danger" role="alert">@ViewBag.Error</div>
+}
+
+@if (ViewBag.Result != null)
+{
+	<div class="alert alert-success" role="alert">@ViewBag.Result</div>
 }
