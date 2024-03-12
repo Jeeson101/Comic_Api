@@ -80,8 +80,10 @@
 				}
 			}
 		</div>
-		<div class="buttonCompare">
+		@using (Html.BeginForm("Index", "Compare", FormMethod.Post))
+		{
+			@Html.Hidden("id", Model.id)
 			<button type="submit">Compare</button>
-		</div>
+		}
 	</div>
 </div>

@@ -10,11 +10,9 @@ namespace Comic_Api.Controllers
 	public class HeroController : Controller
 	{
 		private List<Hero> heroes;
-		bool NiksGegeven = false;
 
 		public HeroController()
 		{
-			// Load heroes from JSON file
 			string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "heroes.json");
 			string json = System.IO.File.ReadAllText(jsonFilePath);
 			heroes = JsonSerializer.Deserialize<List<Hero>>(json);
@@ -47,8 +45,7 @@ namespace Comic_Api.Controllers
 			List<Hero> results = new List<Hero>();
 
 			if (string.IsNullOrEmpty(query))
-			{
-				NiksGegeven = true;
+			{				
 				return RedirectToAction("Search");
 			}
 
