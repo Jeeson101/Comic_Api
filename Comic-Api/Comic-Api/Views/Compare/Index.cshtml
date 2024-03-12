@@ -1,42 +1,33 @@
-﻿@model Hero
+﻿@model List<Hero>
 
 
 <div class="compareContainers">
 	<div class="containerSearch">
 		@using (Html.BeginForm("Index", "Compare", FormMethod.Post))
 		{
-			<input type="text" name="query" />
+			<input type="hidden" name="index" value="0"/>
+			<input type="text" name="query" int="0"/>
 			<button type="submit">Search Hero</button>
 		}
-
-			@if (Model != null)
-			{
-				Hero hero = Model;
-
-				<partial name="HeroPartialView" model="hero" />
-			}
-			else
-			{
-				<p>@ViewBag.ErrorMessage</p>
-			}			
-
+		@if (Model != null && Model.Count > 0 && Model[0] != null)
+		{
+			Hero hero = Model[0];
+			<partial name="HeroPartialView" model="hero"/>
+		}
 	</div>
 
 	<div class="containerSearch">
 		@using (Html.BeginForm("Index", "Compare", FormMethod.Post))
 		{
-			<input type="text" name="query" />
+			<input type="hidden" name="index" value="1"/>
+			<input type="text" name="query" int="1"/>
 			<button type="submit">Search Hero</button>
 		}
-		@if (Model != null)
+		@if (Model != null && Model.Count > 1 && Model[1] != null)
 		{
-			Hero hero = Model;
+			Hero hero = Model[1];
 
 			<partial name="HeroPartialView" model="hero" />
-		}
-		else
-		{
-			<p>@ViewBag.ErrorMessage</p>
 		}
 	</div>
 </div>

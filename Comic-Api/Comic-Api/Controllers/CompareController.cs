@@ -1,4 +1,5 @@
 ﻿using Comic_Api.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -7,6 +8,7 @@ namespace Comic_Api.Controllers
 	public class CompareController : Controller
 	{
 		private List<Hero> heroes;
+		private List<Hero> comparedHeroes;
 
 		public CompareController()
 		{
@@ -22,20 +24,28 @@ namespace Comic_Api.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Index(string query)
+		public IActionResult Index(string query, int pos)
 		{
+			if (string.IsNullOrEmpty(query))
+			{
+				ViewBag.ErrorMessage = "Search a hero please.";
+				return View();
+			}
+
+
+
 			query = query.ToLower();
 			query = query.TrimStart();
 			query = query.TrimEnd();
 
-			var exactMatch = heroes.FirstOrDefault(h => h.name.ToLower() == query);
+			comparedHeroes[pos] = heroes.FirstOrDefault(h => h.name.ToLower() == query);
 
-			if (exactMatch == null)
+			if (comparedHeroes == null)
 			{
 				ViewBag.ErrorMessage = "No results found.";
 			}
 
-			return View(exactMatch);
+			return View(comparedHeroes);
 		}
 
 	}
