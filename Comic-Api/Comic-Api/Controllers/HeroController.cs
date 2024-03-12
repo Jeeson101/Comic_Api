@@ -20,10 +20,6 @@ namespace Comic_Api.Controllers
 			heroes = JsonSerializer.Deserialize<List<Hero>>(json);
 		}
 
-		public ActionResult Index()
-		{
-			return View();
-		}
 
 		[HttpGet]
 		public ActionResult Search(string query)

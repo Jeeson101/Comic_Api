@@ -4,18 +4,12 @@ namespace Comic_Api.Controllers
 {
 	public class CompareController : Controller
 	{
-		[HttpGet]
+		[HttpGet, HttpPost]
 		public IActionResult Index()
 		{
 			return View();
 		}
 
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public IActionResult Index(string query)
-		{
 
-			return View();
-		}
 	}
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Comic-Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+844e8ee5fdbf0cd3f6a7c305a84f1efe95dc243d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b28b50fc4541349020af1cdb249e3aa16e30d7b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Comic-Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Comic-Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
