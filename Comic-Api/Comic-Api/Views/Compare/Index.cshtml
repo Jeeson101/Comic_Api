@@ -1,7 +1,7 @@
 ﻿@model List<Hero>
 
 
-<div class="compareContainers">
+@* <div class="compareContainers">
 	<div class="containerSearch">
 		@using (Html.BeginForm("Index", "Compare", FormMethod.Post))
 		{
@@ -30,4 +30,58 @@
 			<partial name="HeroPartialView" model="hero" />
 		}
 	</div>
+</div> *@
+
+@* <div class="compareContainers">
+	<div class="containerSearch">
+		@using (Html.BeginForm("Index", "Compare", FormMethod.Post))
+		{
+			<input type="hidden" name="index" value="0" />
+			<input type="text" name="query" int="0" />
+			<button type="submit">Search Hero</button>
+		}
+
+		@foreach (var hero in Model)
+		{
+			<partial name="HeroPartialView" model="hero" />
+		}
+	</div>
+</div> *@
+
+<div class="comparePagina">
+	<div class="compareContainersHero">
+		<div class="containerSearch">
+			@foreach (var hero in Model)
+			{
+				@Html.Partial("HeroPartialView", hero)
+			}
+		</div>
+	</div>
+
+	<div>
+		<div class="comparedCharachter">
+			<div class="containerDescription">
+				<h2>Choose heroes you <br/> want to compare</h2>
+				<img id="characterImage" src="" alt="Character" class="img-fluid">
+			</div>
+		</div>
+	</div>
 </div>
+
+
+<script>
+	function selectCharacter(name, imageUrl) {
+		document.getElementById('characterImage').src = imageUrl;
+		document.getElementById('characterImage').alt = name;
+
+		//Klasse verwijderen
+		var buttons = document.querySelectorAll('.characterButton');
+		buttons.forEach(function (btn) {
+			btn.classList.remove('selected');
+		});
+
+		//Klasse toevoegen
+		event.target.classList.add('selected');
+	}
+</script>
+

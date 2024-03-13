@@ -1,84 +1,25 @@
 ﻿@model Hero
 
-<div class="containerHero">
+@* <div class="containerHero">
     <div class="containerTop">
         <div class="containerDescription">
             <h2>@Model.name.First().ToString().ToUpper()@Model.name.Substring(1)</h2>
-
-            <!-- Biography Details -->
-            <div class="containerBiography">
-                <h3>Biography</h3>
-                <p><strong>Full Name:</strong> @Model.biography.fullName</p>
-                <p><strong>Alter Egos:</strong> @Model.biography.alterEgos</p>
-                <h4>Aliases:</h4>
-                <ul>
-                    @foreach (var alias in Model.biography.aliases)
-                    {
-                        <li>@alias</li>
-                    }
-                </ul>
-                <p><strong>Place of Birth:</strong> @Model.biography.placeOfBirth</p>
-                <p><strong>First Appearance:</strong> @Model.biography.firstAppearance</p>
-                <p><strong>Publisher:</strong> @Model.biography.publisher</p>
-                <p><strong>Alignment:</strong> @Model.biography.alignment</p>
-            </div>
-        </div>
-        <div class="col-md-6 order-md-2 containerRightSide">
-            <img src="@Model.images.md" alt="@Model.name" class="img-fluid">
-
-            <div class="col-md-6 containerAppearence">
-                <h4>Gender</h4>
-                <p>@Model.appearance.gender</p>
-                <h4>Race</h4>
-                <p>@Model.appearance.race</p>
-                <h4>Height</h4>
-                <p>@Model.appearance.height[1]</p>
-                <h4>Weight</h4>
-                <p>@Model.appearance.weight[1]</p>
-                <h4>Eye Color</h4>
-                <p>@Model.appearance.hairColor</p>
-                <h4>Hair Color</h4>
-                <p>@Model.appearance.eyeColor</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Image and Appearance Details -->
-    <div class="row">
-        <div class="CointainerPowerstats">
-            <h3>Stats</h3>
-            @foreach (var stat in Model.powerstats.GetType().GetProperties())
-            {
-                var statName = stat.Name;
-                var statValue = (int)stat.GetValue(Model.powerstats);
-
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div><strong>@statName.First().ToString().ToUpper()@statName.Substring(1)</strong></div>
-                        <div><strong>@statValue</strong></div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-@GetColorForStat(statName)" role="progressbar" style="width: @statValue%;" aria-valuenow="@statValue" aria-valuemin="0" aria-valuemax="100">
-                        </div>
-                    </div>
-                </div>
-            }
-
-            @functions {
-                string GetColorForStat(string statName)
-                {
-                    switch (statName)
-                    {
-                        case "intelligence": return "info";
-                        case "strength": return "danger";
-                        case "speed": return "warning";
-                        case "durability": return "success";
-                        case "power": return "primary";
-                        case "combat": return "secondary";
-                        default: return "dark";
-                    }
-                }
-            }
+            <img src="@Model.images.xs" alt="@Model.name" class="img-fluid">
         </div>
     </div>
 </div>
+ *@
+
+
+<div class="character">
+@using (Html.BeginForm("Index", "Compare", FormMethod.Post))
+{
+    @Html.Hidden("name", Model.name)
+    <button type="submit" class="characterButton">
+        <h2>@Model.name</h2>
+        <img src="@Model.images.xs" alt="@Model.name" class="img-fluid">
+    </button>
+}
+</div>
+
+
