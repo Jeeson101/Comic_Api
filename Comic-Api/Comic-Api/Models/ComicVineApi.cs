@@ -93,7 +93,7 @@ namespace Comic_Api.Models
 	        }
         }
 
-       public async Task<SuperHeroMovies> GetMoviesByNameAsync(string name)
+       public async Task<SuperHeroMovies> GetMovie(string name)
     {
         var url = $"https://comicvine.gamespot.com/api/movies/?api_key={_apiKey}&filter=name:{name}";
 
@@ -121,7 +121,15 @@ namespace Comic_Api.Models
 
         if (movieElement == null)
         {
-            throw new InvalidOperationException("Invalid XML response: 'movie' element not found within 'results'.");
+           // throw new InvalidOperationException("Invalid XML response: 'movie' element not found within 'results'.");
+           var Movie = new SuperHeroMovies
+           {
+	           _response = new SuperHeroMovies.response
+	           { 
+		           error = "NotFound"
+	           }
+           };
+           return Movie;
         }
 
         // Deserialize movie data into SuperHeroMovies object

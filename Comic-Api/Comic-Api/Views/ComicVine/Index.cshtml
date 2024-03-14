@@ -15,17 +15,24 @@
 	</div>
 	@if(@Model != null)
 	{
-		foreach (SuperheroComics.responseVolume v in @Model._responseVolume)
+		if (!@Model._response.error.Equals("NotFound"))
 		{
-			if (@v != null)
+			foreach (SuperheroComics.responseVolume v in @Model._responseVolume)
 			{
-				<div>
-					<h2>@v.name</h2>
-					<p><strong>Count of Issues:</strong> @v.count_of_issues</p>
-					<p><strong>Deck:</strong> @v.deck</p>
-					<p><strong>Description:</strong> @Html.Raw(@v.description)</p>
-				</div>
+				if (@v != null)
+				{
+					<div>
+						<h2>@v.name</h2>
+						<p><strong>Count of Issues:</strong> @v.count_of_issues</p>
+						<p><strong>Deck:</strong> @v.deck</p>
+						<p><strong>Description:</strong> @Html.Raw(@v.description)</p>
+					</div>
+				}
 			}
+		}
+		else
+		{
+			<p><strong>De hero werd niet gevonden</strong></p>
 		}
 	}
 </div>
