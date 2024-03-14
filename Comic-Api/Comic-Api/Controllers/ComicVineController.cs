@@ -1,36 +1,31 @@
 ﻿using Comic_Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Comic_Api.Controllers;
-
-public class ComicVineController : Controller
+namespace Comic_Api.Ui.Mvc.Controllers
 {
-	private readonly ComicVineApi _comicVineApi = new ComicVineApi();
-
-	public ActionResult Index()
+	public class ComicVineController : Controller
 	{
-		return View();
-	}
+		private ComicVineApi _comicVineApi;
 
-	[HttpPost, ValidateAntiForgeryToken]
-	public async Task<ActionResult> Index(string heroName)
-	{
-		if (string.IsNullOrEmpty(heroName))
+		public IActionResult Index()
 		{
-			ViewBag.Error = "Please enter a superhero name.";
 			return View();
 		}
 
-		try
+		[HttpPost]
+		public async Task<IActionResult> Index(string heroName)
 		{
-			var result = await _comicVineApi.SearchHero(heroName);
-			ViewBag.Result = result;
-		}
-		catch (Exception ex)
-		{
-			ViewBag.Error = $"An error occurred: {ex.Message}";
-		}
+			if (string.IsNullOrEmpty(heroName))
+			{
+				// Handle empty input
+				return RedirectToAction(nameof(Index));
+			}
 
-		return View();
+			var comicVineApi = new ComicVineApi(); // Create an instance of ComicVineApi
+			var superheroComics = await comicVineApi.SearchHero(heroName);
+
+			// Pass the retrieved data to the view
+			return View(superheroComics);
+		}
 	}
 }

@@ -1,26 +1,31 @@
-﻿@{
-	ViewBag.Title = "Search Superhero";
-}
+﻿@model Comic_Api.Models.SuperheroComics 
 
-<h2>Search Superhero</h2>
-
-@using (Html.BeginForm())
-{
-	<div class="form-group">
-		@Html.Label("Superhero Name:")
-		@Html.TextBox("heroName", null, new { @class = "form-control" })
-		@Html.ValidationMessage("heroName")
+<div class="container">
+	<h1>Superhero Search Results</h1>
+	<div class="row">
+		<div class="col-md-6">
+			<form asp-controller="ComicVine" asp-action="Index" method="post">
+				<div class="form-group">
+					<label for="Superhero">Enter the superhero you want to search for</label>
+					<input name="heroName" type="text" class="form-control" id="Superhero" placeholder="Example: Batman">
+				</div>
+				<button type="submit" class="btn btn-primary">Search</button>
+			</form>
+		</div>
 	</div>
-
-	<button type="submit" class="btn btn-primary">Search</button>
-}
-
-@if (ViewBag.Error != null)
-{
-	<div class="alert alert-danger" role="alert">@ViewBag.Error</div>
-}
-
-@if (ViewBag.Result != null)
-{
-	<div class="alert alert-success" role="alert">@ViewBag.Result</div>
-}
+	@if(@Model != null)
+	{
+		foreach (SuperheroComics.responseVolume v in @Model._responseVolume)
+		{
+			if (@v != null)
+			{
+				<div>
+					<h2>@v.name</h2>
+					<p><strong>Count of Issues:</strong> @v.count_of_issues</p>
+					<p><strong>Deck:</strong> @v.deck</p>
+					<p><strong>Description:</strong> @Html.Raw(@v.description)</p>
+				</div>
+			}
+		}
+	}
+</div>
