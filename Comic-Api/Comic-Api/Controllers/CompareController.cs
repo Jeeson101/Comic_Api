@@ -36,7 +36,9 @@ namespace Comic_Api.Controllers
 
 			if (comparedHeroes.Count == 2)
 			{
-				return RedirectToAction("Index");
+				ViewBag.ErrorMessage = "You can only compare up to two heroes. \n Clear the heroes or compare them";
+				fill(); 
+				return View(viewModel);
 			}
 
 			var results = heroes.Where(h => h.id.Equals(id));

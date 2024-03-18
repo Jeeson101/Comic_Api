@@ -1,6 +1,11 @@
 ﻿@model Comic_Api.Models.HeroListsViewModel
 
-
+@if (ViewBag.ErrorMessage != null)
+{
+	<div class="alert alert-danger" role="alert">
+		@ViewBag.ErrorMessage
+	</div>
+}
 
 <div class="compareChosingPage">
 	<div class="compareContainersHero">
@@ -11,18 +16,17 @@
 			}
 		</div>
 	</div>
-
 	<div>
 		<div class="comparedCharachter">
 			<div class="containerSelectionComparedHero">
+				
 				<h2>Choose heroes you <br /> want to compare</h2>
 				<div class="characterShow red">
 					@{
 						if (Model.HeroesList2.Count >= 1)
 						{
 							var hero = Model.HeroesList2[0];
-							@Html.Partial("ComparePartialView", hero)
-							;
+							@Html.Partial("ComparePartialView", hero);
 						}
 					}
 				</div>
@@ -32,10 +36,11 @@
 						<a class="btn btn-Compare btn-danger" asp-controller="Compare" asp-action="Compare">
 							Compare
 						</a>
-						<a class="btn btn-Compare btn-danger" asp-controller="Compare" asp-action="Clear">
-							Clear
-						</a>
 					}
+
+					<a class="btn btn-Compare btn-danger" asp-controller="Compare" asp-action="Clear">
+						Clear
+					</a>
 				}
 				<div class="characterShow red">
 					@{
