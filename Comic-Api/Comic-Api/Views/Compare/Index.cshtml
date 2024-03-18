@@ -1,57 +1,11 @@
-﻿@model List<Hero>
+﻿@model Comic_Api.Models.HeroListsViewModel
 
 
-@* <div class="compareContainers">
-	<div class="containerSearch">
-		@using (Html.BeginForm("Index", "Compare", FormMethod.Post))
-		{
-			<input type="hidden" name="index" value="0"/>
-			<input type="text" name="query" int="0"/>
-			<button type="submit">Search Hero</button>
-		}
-		@if (Model != null && Model.Count > 0 && Model[0] != null)
-		{
-			Hero hero = Model[0];
-			<partial name="HeroPartialView" model="hero"/>
-		}
-	</div>
 
-	<div class="containerSearch">
-		@using (Html.BeginForm("Index", "Compare", FormMethod.Post))
-		{
-			<input type="hidden" name="index" value="1"/>
-			<input type="text" name="query" int="1"/>
-			<button type="submit">Search Hero</button>
-		}
-		@if (Model != null && Model.Count > 1 && Model[1] != null)
-		{
-			Hero hero = Model[1];
-
-			<partial name="HeroPartialView" model="hero" />
-		}
-	</div>
-</div> *@
-
-@* <div class="compareContainers">
-	<div class="containerSearch">
-		@using (Html.BeginForm("Index", "Compare", FormMethod.Post))
-		{
-			<input type="hidden" name="index" value="0" />
-			<input type="text" name="query" int="0" />
-			<button type="submit">Search Hero</button>
-		}
-
-		@foreach (var hero in Model)
-		{
-			<partial name="HeroPartialView" model="hero" />
-		}
-	</div>
-</div> *@
-
-<div class="comparePagina">
+<div class="compareChosingPage">
 	<div class="compareContainersHero">
 		<div class="containerSearch">
-			@foreach (var hero in Model)
+			@foreach (var hero in Model.HeroesList1)
 			{
 				@Html.Partial("HeroPartialView", hero)
 			}
@@ -60,28 +14,42 @@
 
 	<div>
 		<div class="comparedCharachter">
-			<div class="containerDescription">
-				<h2>Choose heroes you <br/> want to compare</h2>
-				<img id="characterImage" src="" alt="Character" class="img-fluid">
+			<div class="containerSelectionComparedHero">
+				<h2>Choose heroes you <br /> want to compare</h2>
+				<div class="characterShow red">
+					@{
+						if (Model.HeroesList2.Count >= 1)
+						{
+							var hero = Model.HeroesList2[0];
+							@Html.Partial("ComparePartialView", hero)
+							;
+						}
+					}
+				</div>
+				@{
+					if(Model.HeroesList2.Count == 2)
+					{
+						<a class="btn btn-Compare btn-danger" asp-controller="Compare" asp-action="Compare">
+							Compare
+						</a>
+						<a class="btn btn-Compare btn-danger" asp-controller="Compare" asp-action="Clear">
+							Clear
+						</a>
+					}
+				}
+				<div class="characterShow red">
+					@{
+						if (Model.HeroesList2.Count >= 2)
+						{
+							var hero = Model.HeroesList2[1];
+							@Html.Partial("ComparePartialView", hero);
+						}
+					}
+				</div>
 			</div>
+
 		</div>
 	</div>
 </div>
 
-
-<script>
-	function selectCharacter(name, imageUrl) {
-		document.getElementById('characterImage').src = imageUrl;
-		document.getElementById('characterImage').alt = name;
-
-		//Klasse verwijderen
-		var buttons = document.querySelectorAll('.characterButton');
-		buttons.forEach(function (btn) {
-			btn.classList.remove('selected');
-		});
-
-		//Klasse toevoegen
-		event.target.classList.add('selected');
-	}
-</script>
 

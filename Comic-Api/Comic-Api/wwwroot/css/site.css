@@ -22,6 +22,10 @@ body {
     color: white;
 }
 
+.red {
+    border: 1px solid #FF0000;
+}
+
 /*Search page*/
 
 .col-md-6{
@@ -161,6 +165,12 @@ body {
 
 
 /*Compare page*/
+.comparePagina{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
 .comparedCharachter {
     position: fixed;
     top: 30%;
@@ -174,11 +184,30 @@ body {
     max-width: 1000px;
 }
 
+.medium{
+    max-width: 850px;
+}
+
+.compareContainersHeroPosition {
+    position: absolute;
+}
+
+.btn-Compare {
+    margin: 10px;
+}
+
+.btn-compare-page{
+    position: absolute;
+    top: 50%;
+    right: 45%;
+    width: 175px;
+}
+
 .containerSearch {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .character {
@@ -210,7 +239,50 @@ body {
         color: white; 
     }
 
+.characterShow {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #222;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white
+}
 
+.comparedCharachterShow {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 78px;
+    width: 280px;
+}
+
+.containerSelectionComparedHero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .containerSelectionComparedHero > button {
+        width: 100px;
+        margin: 10px;
+    }
+
+.containerLeft{
+    top: 42px;
+    left: 10px;
+}
+
+.containerRight{
+    top: 42px;
+    right: 10px;
+}
 /*Footer*/
 footer {
     color: #0d6efd;

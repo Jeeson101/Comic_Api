@@ -18,12 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\jason\OneDrive\Documenten\GitHub\Comic_Api\Comic-Api\Comic-Api
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/Compare.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxDb21wYXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/ComparePartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxDb21wYXJlUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/HeroPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxIZXJvUGFydGlhbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/ShowHeroPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxTaG93SGVyb1BhcnRpYWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Hero/Search.cshtml]

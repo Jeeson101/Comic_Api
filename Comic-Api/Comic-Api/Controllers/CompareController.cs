@@ -1,5 +1,6 @@
 ﻿using Comic_Api.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Xml.Linq;
@@ -9,47 +10,63 @@ namespace Comic_Api.Controllers
 	public class CompareController : Controller
 	{
 		private List<Hero> heroes;
-        private static List<string> characterList = new List<string>();
+		private static List<Hero> comparedHeroes = new List<Hero>();
+		private HeroListsViewModel viewModel = new HeroListsViewModel();
 
-        public CompareController()
+		public CompareController()
 		{
 			string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "heroes.json");
 			string json = System.IO.File.ReadAllText(jsonFilePath);
 			heroes = JsonSerializer.Deserialize<List<Hero>>(json);
+
+
 		}
 
 		[HttpGet]
 		public IActionResult Index()
 		{
-			return View(heroes);
+			fill();
+			return View(viewModel);
 		}
         
 		[HttpPost]
-		public IActionResult Index(string name)
+		public IActionResult Index(int id)
 		{
-            //if (string.IsNullOrEmpty(query))
-            //{
-            //	ViewBag.ErrorMessage = "Search a hero please.";
-            //	return View();
-            //}
 
 
+			if (comparedHeroes.Count == 2)
+			{
+				return RedirectToAction("Index");
+			}
 
-            //query = query.ToLower();
-            //query = query.TrimStart();
-            //query = query.TrimEnd();
+			var results = heroes.Where(h => h.id.Equals(id));
 
-            //comparedHeroes[pos] = heroes.FirstOrDefault(h => h.name.ToLower() == query);
 
-            //if (comparedHeroes == null)
-            //{
-            //	ViewBag.ErrorMessage = "No results found.";
-            //}
+            comparedHeroes.AddRange(results);
+			//return RedirectToAction("Index"); 
+			fill();
 
-            characterList.Add(name);
-            return RedirectToAction("Index"); // Redirect back to the main view
 
-            return View(heroes);
+			return View(viewModel);
+		}
+
+		[HttpGet]
+		public IActionResult Compare()
+		{
+			return View(comparedHeroes);
+		}
+
+		public IActionResult Clear()
+		{
+			comparedHeroes.Clear();
+			fill();
+			return View("Index", viewModel);
+		}
+
+		private void fill()
+		{
+			viewModel.HeroesList1 = heroes;
+			viewModel.HeroesList2 = comparedHeroes;
 		}
 
 	}
