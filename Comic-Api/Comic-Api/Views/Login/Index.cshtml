@@ -1,0 +1,17 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+<form asp-action="Index" method="post">
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br>
+    @if(Model != "")
+    {
+        <p class="Verkeerd">@Model</p>
+    }
+    <input type="submit" value="Login">
+</form>
