@@ -25,9 +25,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ComicVine" asp-action="Movie">Movies</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
-                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+	                    @{
+		                    var userId = Context.Request.Cookies["UserID"];
+                            var loginAction = string.IsNullOrEmpty(userId) ? "Index" : "Logout";
+                            var loginText = string.IsNullOrEmpty(userId) ? "Login" : "Logout";
+	                    }
+	                    <li class="nav-item">
+		                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="@loginAction">@loginText</a>
+	                    </li>
                     </ul>
                 </div>
             </div>
