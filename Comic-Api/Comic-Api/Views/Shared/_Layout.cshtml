@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="ComicVine" asp-action="Index">Comic_Api</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -22,10 +22,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ComicVine" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="ComicVine" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ComicVine" asp-action="Movie">Movies</a>
+                            <a class="nav-link" asp-area="" asp-controller="ComicVine" asp-action="Movie">Movies</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -34,7 +34,7 @@
 		                    var loginAction = string.IsNullOrEmpty(userId) ? "Index" : "Logout";
 		                    var loginText = string.IsNullOrEmpty(userId) ? "Login" : "Logout";
 
-		                    // Retrieve user's name if logged in
+		                    
 		                    var userName = string.Empty;
 		                    if (!string.IsNullOrEmpty(userId))
 		                    {
@@ -44,10 +44,10 @@
 		                    }
 	                    }
                         <li class="nav-item">
-                            <p class="nav-link text-dark">@userName</p>
+                            <p class="nav-link">@userName</p>
                         </li>
 	                    <li class="nav-item">
-	                        <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="@loginAction"> @loginText</a>
+	                        <a class="nav-link" asp-area="" asp-controller="Login" asp-action="@loginAction"> @loginText</a>
 	                    </li>
                     </ul>
                 </div>
