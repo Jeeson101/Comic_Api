@@ -43,5 +43,18 @@ namespace Comic_Api.Controllers
 
             return View("Index", error);
         }
+        [HttpGet]
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult SignUp(User u, String password)
+        {
+            u.HashPassword(password);
+            UserDB userDB = new UserDB();
+            userDB.AddUser(u);
+            return View("Result",u);
+        }
     }
 }

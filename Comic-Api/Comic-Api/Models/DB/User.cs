@@ -25,5 +25,12 @@ namespace Comic_Api.Models.DB
                 return StructuralComparisons.StructuralEqualityComparer.Equals(hashBytes, PasswordHash);
             }
         }
+        public void HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                PasswordHash = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+            }
+        }
 	}
 }
