@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Comic_Api.Models.DB
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -29,11 +31,23 @@
                     <ul class="navbar-nav">
 	                    @{
 		                    var userId = Context.Request.Cookies["UserID"];
-                            var loginAction = string.IsNullOrEmpty(userId) ? "Index" : "Logout";
-                            var loginText = string.IsNullOrEmpty(userId) ? "Login" : "Logout";
+		                    var loginAction = string.IsNullOrEmpty(userId) ? "Index" : "Logout";
+		                    var loginText = string.IsNullOrEmpty(userId) ? "Login" : "Logout";
+
+		                    // Retrieve user's name if logged in
+		                    var userName = string.Empty;
+		                    if (!string.IsNullOrEmpty(userId))
+		                    {
+			                    UserDB userDB = new UserDB();
+			                    var user = userDB.GetUserByID(int.Parse(userId));
+                                userName = "User: " + user.FirstName + " " + user.LastName;
+		                    }
 	                    }
+                        <li class="nav-item">
+                            <p class="nav-link text-dark">@userName</p>
+                        </li>
 	                    <li class="nav-item">
-		                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="@loginAction">@loginText</a>
+	                        <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="@loginAction"> @loginText</a>
 	                    </li>
                     </ul>
                 </div>

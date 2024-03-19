@@ -24,7 +24,8 @@ namespace Comic_Api.Controllers
                     {
                         HttpContext.Response.Cookies.Append("UserID", u.UserID.ToString());
                         //return View("Result", u);
-                        return RedirectToAction("Result");
+                      //  return RedirectToAction("Result");
+                      return RedirectToAction("Index","Home");
                     }
                     else
                     { 
@@ -62,7 +63,8 @@ namespace Comic_Api.Controllers
                 userDB.AddUser(u);
                 login(u.Email, password);
                 //  return View("Result",u);
-                return RedirectToAction("Result");
+               // return RedirectToAction("Result");
+               return RedirectToAction("Index","Home");
             }
             //Account bestaat all
             ViewBag.Error = "Email has already used, Choose a new one!";
