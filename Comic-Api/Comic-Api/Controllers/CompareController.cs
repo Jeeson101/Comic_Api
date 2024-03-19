@@ -1,9 +1,12 @@
 ﻿using Comic_Api.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
+using Core.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
 using System.Text.Json;
-using System.Xml.Linq;
 
 namespace Comic_Api.Controllers
 {
@@ -18,8 +21,6 @@ namespace Comic_Api.Controllers
 			string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "heroes.json");
 			string json = System.IO.File.ReadAllText(jsonFilePath);
 			heroes = JsonSerializer.Deserialize<List<Hero>>(json);
-
-
 		}
 
 		[HttpGet]
@@ -28,26 +29,30 @@ namespace Comic_Api.Controllers
 			fill();
 			return View(viewModel);
 		}
-        
+
 		[HttpPost]
 		public IActionResult Index(int id)
 		{
-
-
 			if (comparedHeroes.Count == 2)
 			{
-				ViewBag.ErrorMessage = "You can only compare up to two heroes. \n Clear the heroes or compare them";
-				fill(); 
+				ViewBag.ErrorMessage = "You can only compare up to two heroes. Clear the heroes or compare them";
+				fill();
 				return View(viewModel);
 			}
 
-			var results = heroes.Where(h => h.id.Equals(id));
+			if (comparedHeroes.Any(h => h.id == id))
+			{
+				ViewBag.ErrorMessage = "You can't compare the same hero";
+				fill();
+				return View(viewModel);
+			}
 
-
-            comparedHeroes.AddRange(results);
-			//return RedirectToAction("Index"); 
-			fill();
-
+			var result = heroes.FirstOrDefault(h => h.id == id);
+			if (result != null)
+			{
+				comparedHeroes.Add(result);
+				fill();
+			}
 
 			return View(viewModel);
 		}
@@ -57,6 +62,22 @@ namespace Comic_Api.Controllers
 		{
 			return View(comparedHeroes);
 		}
+
+		[HttpPost]
+		public IActionResult Search(string query)
+		{
+			if (string.IsNullOrWhiteSpace(query))
+			{
+				var originalHeroesHtml = GenerateHeroesHtml(heroes);
+				return Content(originalHeroesHtml, "text/html");
+			}
+
+			var results = heroes.Where(h => h.name.ToLower().Contains(query.ToLower())).ToList();
+			var searchResultsHtml = GenerateHeroesHtml(results);
+
+			return Content(searchResultsHtml, "text/html");
+		}
+
 
 		public IActionResult Clear()
 		{
@@ -71,5 +92,23 @@ namespace Comic_Api.Controllers
 			viewModel.HeroesList2 = comparedHeroes;
 		}
 
+
+		private string GenerateHeroesHtml(List<Hero> heroesList)
+		{
+			StringBuilder htmlBuilder = new StringBuilder();
+			foreach (var hero in heroesList)
+			{
+				htmlBuilder.Append("<div class=\"character\">");
+				htmlBuilder.Append("<form method=\"post\" action=\"/Compare/Index\" id=\"compareForm\">");
+				htmlBuilder.Append($"<input type=\"hidden\" id=\"heroId\" name=\"id\" value=\"{hero.id}\">");
+				htmlBuilder.Append("<button type=\"button\" class=\"characterButton\" onclick=\"selectCharacter(" + hero.id + ")\">");
+				htmlBuilder.Append($"<h2>{char.ToUpper(hero.name[0]) + hero.name.Substring(1)}</h2>");
+				htmlBuilder.Append($"<img src=\"{hero.images.xs}\" alt=\"{hero.name}\" class=\"img-fluid\">");
+				htmlBuilder.Append("</button>");
+				htmlBuilder.Append("</form>");
+				htmlBuilder.Append("</div>");
+			}
+			return htmlBuilder.ToString();
+		}
 	}
 }

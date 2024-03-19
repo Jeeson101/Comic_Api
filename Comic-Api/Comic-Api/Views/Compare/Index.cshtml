@@ -9,7 +9,7 @@
 
 <div class="compareChosingPage">
 	<div class="compareContainersHero">
-		<div class="containerSearch">
+		<div class="containerSearch" id="searchResultsContainer">
 			@foreach (var hero in Model.HeroesList1)
 			{
 				@Html.Partial("HeroPartialView", hero)
@@ -19,7 +19,10 @@
 	<div>
 		<div class="comparedCharachter">
 			<div class="containerSelectionComparedHero">
-				
+				@using (Html.BeginForm("Search", "Compare", FormMethod.Post, new { id = "searchForm" }))
+				{
+					<input type="text" name="query" id="queryInput" />
+				}
 				<h2>Choose heroes you <br /> want to compare</h2>
 				<div class="characterShow red">
 					@{
@@ -56,5 +59,58 @@
 		</div>
 	</div>
 </div>
+
+
+@section Scripts {
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			function handleInput() {
+				var query = document.getElementById('queryInput').value;
+
+				fetch('@Url.Action("Search", "Compare")', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					body: 'query=' + encodeURIComponent(query)
+				})
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('searchResultsContainer').innerHTML = data;
+					})
+					.catch(error => {
+						console.error('Error:', error);
+					});
+			}
+
+			var debounceTimeout;
+			var queryInput = document.getElementById('queryInput');
+			if (queryInput) {
+				queryInput.addEventListener('input', function () {
+					clearTimeout(debounceTimeout);
+					debounceTimeout = setTimeout(handleInput, 300); 
+				});
+			} else {
+				console.error('Element with ID "queryInput" not found.');
+			}
+		});
+	</script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
