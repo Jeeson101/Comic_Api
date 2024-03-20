@@ -72,27 +72,21 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    padding-bottom: 10px; 
 }
 .buttonComic {
     position: absolute;
     right: 165px;
     bottom: 0;
-    padding-bottom: 10px;
 }
 
-/* Apply styles to both buttons */
 .row.mt-4 button {
     background-color: #222;
     border: 2px solid #0d6efd;
-    height: 75px;
+    height: 50px;
     width: 150px;
     color: white;
-    /* Adjust button styles */
-    margin-bottom: 10px; /* Add some space between buttons */
 }
 
-/* Apply hover effect to both buttons */
 .row.mt-4 button:hover {
     background-color: #0d6efd;
     transition: 0.5s;

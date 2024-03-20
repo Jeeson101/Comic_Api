@@ -82,6 +82,14 @@
 		</div>
 
 		<div class="row mt-4">
+			
+			@using (Html.BeginForm("SearchPost2", "Hero", FormMethod.Post))
+			{
+				@Html.Hidden("query", Model.name)
+				@Html.Hidden("ID", Model.id)
+				<button class="buttonFavorite" type="submit">Favorite</button>
+			}
+
 			@using (Html.BeginForm("Index", "ComicVine", FormMethod.Post))
 			{
 				@Html.Hidden("heroName", Model.name)
