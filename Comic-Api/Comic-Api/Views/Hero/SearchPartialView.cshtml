@@ -81,39 +81,42 @@
 			}
 		</div>
 
-		<div class="row mt-4">
 			
-			@using (Html.BeginForm("SearchPost2", "Hero", FormMethod.Post))
+		@using (Html.BeginForm("SearchPost2", "Hero", FormMethod.Post))
+		{
+			bool erin = false;
+			foreach (FavoriteSuperhero hero in ViewBag.ListFavs)
 			{
-				bool erin = false;
-					foreach (FavoriteSuperhero hero in @ViewBag.ListFavs)
-					{
-						if (hero.SuperheroID == Model.id)
-						{
-							erin = true;
-						}
-					}
-
-					if (!erin)
-					{ 
-						@Html.Hidden("query", Model.name)
-						@Html.Hidden("ID", Model.id)
-					@Html.Hidden("Bool", erin)
-						<button class="buttonFavorite" type="submit">Favorite</button>
-					}
-					else
-					{
-					@Html.Hidden("query", Model.name)
-					@Html.Hidden("ID", Model.id)
-					@Html.Hidden("Bool", erin)
-					<button class="buttonFavorite" type="submit">UnFavorite</button>
-					}
+				if (hero.SuperheroID == Model.id)
+				{
+					erin = true;
+				}
 			}
 
-			@using (Html.BeginForm("Index", "ComicVine", FormMethod.Post))
+			if (!erin)
+			{ 
+				@Html.Hidden("query", Model.name)
+				@Html.Hidden("ID", Model.id)
+				@Html.Hidden("Bool", erin)
+				<button class="buttonFavorite" type="submit"><p>Favorite</p></button>
+			}
+			else
+			{
+				@Html.Hidden("query", Model.name)
+				@Html.Hidden("ID", Model.id)
+				@Html.Hidden("Bool", erin)
+				<button class="buttonUnFavorite" type="submit"><p>Un Favorite</p></button>
+			}
+		}
+
+			
+		<div class="row mt-4">
+
+		@using (Html.BeginForm("Index", "ComicVine", FormMethod.Post))
 			{
 				@Html.Hidden("heroName", Model.name)
-				<button class="buttonComic" type="submit">View Comics</button>
+				<button class="buttonComic" type="submit"> View Comics
+				</button>
 			}
 
 			@using (Html.BeginForm("Index", "Compare", FormMethod.Post, new { @class = "buttonCompare" }))

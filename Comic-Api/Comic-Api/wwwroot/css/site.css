@@ -92,7 +92,53 @@ body {
     transition: 0.5s;
 }
 
+.buttonFavorite {
+    background-image: url('/icons8-star-961.png'); /* Default image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #222;
+    border: 2px solid yellow;
+    color: white;
 
+    position: absolute;
+    right: 12px;
+    bottom: 70px;
+}
+
+.buttonFavorite:hover {
+    background-image: url('/icons8-star-96.png'); /* Hover image */
+}
+.buttonUnFavorite {
+    background-image: url('/icons8-star-96.png'); /* Default image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #222;
+    border: 2px solid yellow;
+    color: white;
+
+    position: absolute;
+    right: 12px;
+    bottom: 70px;
+}
+
+.buttonUnFavorite:hover {
+    background-image: url('/icons8-star-961.png'); /* Hover image */
+}
+
+.buttonFavorite p   {
+    padding-left: 25px;
+    padding-top: 8px;
+}
+.buttonUnFavorite p {
+    padding-left: 45px;
+    padding-top: 8px;
+}
 
 
 

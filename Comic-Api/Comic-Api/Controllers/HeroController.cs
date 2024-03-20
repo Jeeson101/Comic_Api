@@ -18,7 +18,7 @@ namespace Comic_Api.Controllers
 			string json = System.IO.File.ReadAllText(jsonFilePath);
 			heroes = JsonSerializer.Deserialize<List<Hero>>(json);
 		}
-		
+
 
 		[HttpGet]
 		public ActionResult Search(string query)
@@ -44,7 +44,7 @@ namespace Comic_Api.Controllers
 		{
 			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
 			{
-				
+
 			}
 			else
 			{
@@ -61,7 +61,7 @@ namespace Comic_Api.Controllers
 			List<Hero> results = new List<Hero>();
 
 			if (string.IsNullOrEmpty(query))
-			{				
+			{
 				return RedirectToAction("Search");
 			}
 
@@ -108,7 +108,7 @@ namespace Comic_Api.Controllers
 
 			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
 			{
-				
+
 			}
 			else
 			{
@@ -123,7 +123,7 @@ namespace Comic_Api.Controllers
 			List<Hero> results = new List<Hero>();
 
 			if (string.IsNullOrEmpty(query))
-			{				
+			{
 				return RedirectToAction("Search");
 			}
 
@@ -165,7 +165,7 @@ namespace Comic_Api.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult SearchPost2(string query,int ID, bool Bool)
+		public ActionResult SearchPost2(string query, int ID, bool Bool)
 		{
 			TempData["SearchQuery"] = query;
 			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
@@ -182,18 +182,61 @@ namespace Comic_Api.Controllers
 				var listFavvanUser = DB.GetFavoriteSuperheroesByUserID(UserID);
 				ViewBag.ListFavs = listFavvanUser;
 
-				
-				if (!Bool) 
+
+				if (!Bool)
 				{
-					DB.AddFavoriteSuperhero(UserID,ID);
+					DB.AddFavoriteSuperhero(UserID, ID);
 				}
 				else
 				{
-					DB.RemoveFavoriteSuperhero(UserID,ID);
+					DB.RemoveFavoriteSuperhero(UserID, ID);
 					//ViewBag.ErrorMessage = "Je zal deze unfavoriten";
 				}
+
 				return RedirectToAction("SearchEmpty");
 			}
+		}
+
+		public ActionResult SearchFavoriteHeroesOnID()
+		{
+			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
+			{
+				ViewBag.ErrorMessage = "You need to be logged in.";
+				return View("Search");
+			}
+			else
+			{
+				String UserIDS = Request.Cookies["UserID"];
+				int UserID = Convert.ToInt32(UserIDS);
+
+				FavoriteSuperheroDB DB = new FavoriteSuperheroDB();
+				var listFavvanUser = DB.GetFavoriteSuperheroesByUserID(UserID);
+				ViewBag.ListFavs = listFavvanUser;
+
+
+				List<Hero> results = new List<Hero>();
+
+
+				foreach (Hero h in heroes)
+				{
+					foreach (FavoriteSuperhero s in listFavvanUser)
+					{
+						if (h.id == s.SuperheroID)
+						{
+							results.Add(h);
+						}
+					}
+					
+				}
+
+			
+				return View("Search",results);
+			}
+
+			
+
+
+			
 		}
 	}
 }

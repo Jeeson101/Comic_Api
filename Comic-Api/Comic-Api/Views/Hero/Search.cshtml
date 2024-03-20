@@ -12,6 +12,10 @@
 	<input type="text" name="query" />
 	<button type="submit">Search Hero</button>
 }
+@using (Html.BeginForm("SearchFavoriteHeroesOnID", "Hero", FormMethod.Post))
+{
+	<button class="buttonFavHeroes" type="submit">Show my favorite heroes</button>
+}
 
 @if (Model != null && Model.Any())
 {

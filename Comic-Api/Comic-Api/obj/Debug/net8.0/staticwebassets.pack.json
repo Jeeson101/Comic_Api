@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\milan\\OneDrive\\Documents\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\wwwroot\\icons8-star-96.png",
+      "PackagePath": "staticwebassets\\icons8-star-96.png"
+    },
+    {
+      "Id": "C:\\Users\\milan\\OneDrive\\Documents\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\wwwroot\\icons8-star-961.png",
+      "PackagePath": "staticwebassets\\icons8-star-961.png"
+    },
+    {
       "Id": "C:\\Users\\milan\\OneDrive\\Documents\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
