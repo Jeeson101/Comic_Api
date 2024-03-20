@@ -1,0 +1,116 @@
+﻿@model Comic_Api.Models.HeroListsViewModel
+
+@if (ViewBag.ErrorMessage != null)
+{
+	<div class="alert alert-danger" role="alert">
+		@ViewBag.ErrorMessage
+	</div>
+}
+
+<div class="compareChosingPage">
+	<div class="compareContainersHero">
+		<div class="containerSearch" id="searchResultsContainer">
+			@foreach (var hero in Model.HeroesList1)
+			{
+				@Html.Partial("HeroPartialView", hero)
+			}
+		</div>
+	</div>
+	<div>
+		<div class="comparedCharachter">
+			<div class="containerSelectionComparedHero">
+				@using (Html.BeginForm("Search", "Compare", FormMethod.Post, new { id = "searchForm" }))
+				{
+					<input type="text" name="query" id="queryInput" />
+				}
+				<h2>Choose heroes you <br /> want to compare</h2>
+				<div class="characterShow red">
+					@{
+						if (Model.HeroesList2.Count >= 1)
+						{
+							var hero = Model.HeroesList2[0];
+							@Html.Partial("ComparePartialView", hero);
+						}
+					}
+				</div>
+				@{
+					if(Model.HeroesList2.Count == 2)
+					{
+						<a class="btn btn-Compare btn-danger" asp-controller="Compare" asp-action="Compare">
+							Compare
+						</a>
+					}
+
+					<a class="btn btn-Compare btn-danger" asp-controller="Compare" asp-action="Clear">
+						Clear
+					</a>
+				}
+				<div class="characterShow red">
+					@{
+						if (Model.HeroesList2.Count >= 2)
+						{
+							var hero = Model.HeroesList2[1];
+							@Html.Partial("ComparePartialView", hero);
+						}
+					}
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+@section Scripts {
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			function handleInput() {
+				var query = document.getElementById('queryInput').value;
+
+				fetch('@Url.Action("Search", "Compare")', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					body: 'query=' + encodeURIComponent(query)
+				})
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('searchResultsContainer').innerHTML = data;
+					})
+					.catch(error => {
+						console.error('Error:', error);
+					});
+			}
+
+			var debounceTimeout;
+			var queryInput = document.getElementById('queryInput');
+			if (queryInput) {
+				queryInput.addEventListener('input', function () {
+					clearTimeout(debounceTimeout);
+					debounceTimeout = setTimeout(handleInput, 300); 
+				});
+			} else {
+				console.error('Element with ID "queryInput" not found.');
+			}
+		});
+	</script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

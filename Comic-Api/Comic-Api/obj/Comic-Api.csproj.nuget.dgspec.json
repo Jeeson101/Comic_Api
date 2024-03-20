@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj": {}
+    "C:\\Users\\jason\\OneDrive\\Documenten\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj": {
+    "C:\\Users\\jason\\OneDrive\\Documenten\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj",
+        "projectUniqueName": "C:\\Users\\jason\\OneDrive\\Documenten\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj",
         "projectName": "Comic-Api",
-        "projectPath": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj",
+        "projectPath": "C:\\Users\\jason\\OneDrive\\Documenten\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj",
         "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jason\\Downloads\\Github\\Comic_Api\\Comic-Api\\Comic-Api\\obj\\",
+        "outputPath": "C:\\Users\\jason\\OneDrive\\Documenten\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jason\\AppData\\Roaming\\NuGet\\NuGet.Config",

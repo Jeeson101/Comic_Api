@@ -1,0 +1,21 @@
+﻿@model Hero
+
+ 
+<div class="character">
+    @using (Html.BeginForm("Index", "Compare", FormMethod.Post, new { id = "compareForm" }))
+    {
+        <input type="hidden" id="heroId" name="id" value="@Model.id">
+        <button type="button" class="characterButton" onclick="selectCharacter('@Model.id')"> 
+            <h2>@Model.name.First().ToString().ToUpper()@Model.name.Substring(1)</h2>
+            <img src="@Model.images.xs" alt="@Model.name" class="img-fluid">
+        </button>
+    }
+</div>
+
+<script>
+       function selectCharacter(id) 
+       {
+             document.getElementById('heroId').value = id; 
+             document.getElementById('compareForm').submit(); 
+       }
+</script>

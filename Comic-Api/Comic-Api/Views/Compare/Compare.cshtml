@@ -1,0 +1,20 @@
+﻿@model List<Hero>
+
+
+<div class="comparePagina">
+	<div class="compareContainersHero medium compareContainersHeroPosition containerLeft">
+		@{
+			var hero = Model[0];
+			@Html.Partial("ShowHeroPartialView", hero);
+		}
+	</div>
+	<a class="btn btn-Compare btn-compare-page btn-danger" asp-controller="Compare" asp-action="Clear">
+		Clear
+	</a>
+	<div class="compareContainersHero medium compareContainersHeroPosition containerRight">
+		@{
+			var compareHerotwo = Model[1];
+			@Html.Partial("ShowHeroPartialView", compareHerotwo);
+		}
+	</div>
+</div>

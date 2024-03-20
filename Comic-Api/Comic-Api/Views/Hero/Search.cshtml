@@ -1,0 +1,27 @@
+﻿@model List<Hero>
+
+@if (ViewBag.ErrorMessage != null)
+{
+	<div class="alert alert-danger" role="alert">
+		@ViewBag.ErrorMessage
+	</div>
+}
+
+@using (Html.BeginForm("SearchPost", "Hero", FormMethod.Post))
+{
+	<input type="text" name="query" />
+	<button type="submit">Search Hero</button>
+}
+
+@if (Model != null && Model.Any())
+{
+	@foreach (var hero in Model)
+	{
+
+		<partial name="SearchPartialView" model="hero"/>
+	}
+}
+else
+{
+	<p>@ViewBag.ErrorMessage</p>
+}

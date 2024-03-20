@@ -1,34 +1,289 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: black;
+    color: white;
 }
 
-.col-md-4
-{
+.red {
+    border: 1px solid #FF0000;
+}
+
+/*Search page*/
+
+.col-md-6{
+    width: auto;
+}
+
+.row {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
 }
 
-.text-muted
-{
-    padding: 30px;
 
+.buttonCompare {
+    width: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 10px;
+}
+
+.buttonCompare > button {
+    background-color: #222;
+    border: 2px solid #0d6efd;
+    height: 75px;
+    width: 150px;
+    color: white;
+}
+
+.buttonCompare > button:hover {
+    background-color: #0d6efd;
+    transition: 0.5s;
+}
+
+.img-fluid{
+    height: 100%;
+}
+
+.containerHero {
+    background-color: #222;
+    border: 2px solid #0d6efd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+    .containerHero h2 {
+        color: #0d6efd;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+.containerTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerBiography {
+    margin-bottom: 30px;
+}
+
+    .containerBiography h3 {
+        color: #0d6efd;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .containerBiography p {
+        margin: 5px 0;
+    }
+
+    .containerBiography h4 {
+        color: #0d6efd;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .containerBiography ul {
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    .containerBiography li {
+        margin-bottom: 5px;
+    }
+
+
+.containerRightSide{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.containerAppearence {
+    text-align: right;
+    padding: 20px;
+}
+
+    .containerAppearence h4 {
+        color: #0d6efd;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .containerAppearence p {
+        margin-bottom: 5px;
+    }
+
+.CointainerPowerstats {
+    width: auto;
+}
+
+    .CointainerPowerstats h3 {
+        color: #0d6efd;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .CointainerPowerstats ul {
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    .CointainerPowerstats li {
+        margin-bottom: 5px;
+    }
+
+.progress-bar {
+    border: 1px solid black;
+}
+
+.progress
+{
+    width: 500px;
+}
+
+
+/*Compare page*/
+.comparePagina{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.comparedCharachter {
+    position: fixed;
+    top: 30%;
+    right: 10%;
+}
+
+.compareContainersHero {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1000px;
+}
+
+.medium{
+    width: 850px;
+}
+
+.compareContainersHeroPosition {
+    position: absolute;
+}
+
+.btn-Compare {
+    margin: 10px;
+}
+
+.btn-compare-page{
+    position: absolute;
+    top: 50%;
+    right: 45%;
+    width: 175px;
+}
+
+.containerSearch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.character {
+    flex: 0 0 calc(33.33% - 20px); 
+    margin-bottom: 20px; 
+}
+
+.characterButton {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #0d6efd;
+    border-radius: 5px;
+    background-color: #222;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white
+}
+
+    .characterButton:hover {
+        background-color: #0d6efd;
+    }
+
+    .characterButton.selected {
+        background-color: green; 
+        color: white; 
+    }
+
+.characterShow {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #222;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white
+}
+
+.comparedCharachterShow {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 78px;
+    width: 280px;
+}
+
+.containerSelectionComparedHero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .containerSelectionComparedHero > button {
+        width: 100px;
+        margin: 10px;
+    }
+
+.containerLeft{
+    top: 42px;
+    left: 10px;
+}
+
+.containerRight{
+    top: 42px;
+    right: 10px;
+}
+/*Footer*/
+footer {
+    color: #0d6efd;
 }
