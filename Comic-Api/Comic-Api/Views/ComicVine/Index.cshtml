@@ -1,0 +1,38 @@
+﻿@model Comic_Api.Models.SuperheroComics 
+
+<div class="container">
+	<h1>Superhero Search Results</h1>
+	<div class="row">
+		<div class="col-md-6">
+			<form asp-controller="ComicVine" asp-action="Index" method="post">
+				<div class="form-group">
+					<label class="mb-3" for="Superhero">Enter the superhero you want to search for</label>
+					<input name="heroName" type="text" class="form-control mb-3" id="Superhero" placeholder="Example: Batman">
+				</div>
+				<button type="submit" class="btn btn-primary">Search</button>
+			</form>
+		</div>
+	</div>
+	@if(@Model != null)
+	{
+		if (!@Model._response.error.Equals("NotFound"))
+		{
+			foreach (SuperheroComics.responseVolume v in @Model._responseVolume)
+			{
+				if (@v != null)
+				{
+					<div>
+						<h2>@v.name</h2>
+						<p><strong>Count of Issues:</strong> @v.count_of_issues</p>
+						<p><strong>Deck:</strong> @v.deck</p>
+						<p><strong>Description:</strong> @Html.Raw(@v.description)</p>
+					</div>
+				}
+			}
+		}
+		else
+		{
+			<p><strong>De hero werd niet gevonden</strong></p>
+		}
+	}
+</div>

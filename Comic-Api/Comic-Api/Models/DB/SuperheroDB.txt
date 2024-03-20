@@ -1,0 +1,23 @@
+CREATE DATABASE  SuperheroDB;
+
+USE SuperheroDB;
+
+CREATE TABLE  UserAccounts (
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    PasswordHash VARBINARY(64) NOT NULL
+);
+
+
+
+DECLARE @PasswordHash VARBINARY(64);
+SET @PasswordHash = HASHBYTES('SHA2_256', 'Admin123');
+
+INSERT INTO UserAccounts (FirstName, LastName, Email, PasswordHash)
+VALUES ('Milan', 'Deruytter', 'Admin@loc.be', @PasswordHash);
+
+
+select * from UserAccounts
+
