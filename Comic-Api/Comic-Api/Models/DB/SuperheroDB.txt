@@ -21,3 +21,14 @@ VALUES ('Milan', 'Deruytter', 'Admin@loc.be', @PasswordHash);
 
 select * from UserAccounts
 
+
+
+-- Create a new table to store favorite superheroes for users
+CREATE TABLE FavoriteSuperhero (
+    FavoriteID INT PRIMARY KEY IDENTITY(1,1),
+    UserID INT FOREIGN KEY REFERENCES UserAccounts(UserID),
+    SuperheroID INT UNIQUE NOT NULL
+);
+
+
+select * from FavoriteSuperhero

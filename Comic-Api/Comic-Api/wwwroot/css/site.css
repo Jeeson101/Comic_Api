@@ -93,7 +93,7 @@ body {
 }
 
 .buttonFavorite {
-    background-image: url('/icons8-star-961.png'); /* Default image */
+    background-image: url('/icons8-star-961.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 150px;
@@ -109,10 +109,10 @@ body {
 }
 
 .buttonFavorite:hover {
-    background-image: url('/icons8-star-96.png'); /* Hover image */
+    background-image: url('/icons8-star-96.png');
 }
 .buttonUnFavorite {
-    background-image: url('/icons8-star-96.png'); /* Default image */
+    background-image: url('/icons8-star-96.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 150px;
@@ -128,7 +128,7 @@ body {
 }
 
 .buttonUnFavorite:hover {
-    background-image: url('/icons8-star-961.png'); /* Hover image */
+    background-image: url('/icons8-star-961.png');
 }
 
 .buttonFavorite p   {
