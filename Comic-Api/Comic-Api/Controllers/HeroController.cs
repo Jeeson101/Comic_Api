@@ -18,7 +18,7 @@ namespace Comic_Api.Controllers
 			string json = System.IO.File.ReadAllText(jsonFilePath);
 			heroes = JsonSerializer.Deserialize<List<Hero>>(json);
 		}
-
+		
 
 		[HttpGet]
 		public ActionResult Search(string query)
@@ -39,10 +39,25 @@ namespace Comic_Api.Controllers
 			return View(results);
 		}
 
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult SearchPost(string query)
+		[HttpGet]
+		public ActionResult SearchEmpty()
 		{
+			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
+			{
+				
+			}
+			else
+			{
+				String UserIDS = Request.Cookies["UserID"];
+				int UserID = Convert.ToInt32(UserIDS);
+
+				FavoriteSuperheroDB DB = new FavoriteSuperheroDB();
+				var listFavvanUser = DB.GetFavoriteSuperheroesByUserID(UserID);
+				ViewBag.ListFavs = listFavvanUser;
+			}
+
+			string query = TempData["SearchQuery"] as string;
+
 			List<Hero> results = new List<Hero>();
 
 			if (string.IsNullOrEmpty(query))
@@ -88,8 +103,23 @@ namespace Comic_Api.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult SearchPost2(string query,int ID)
+		public ActionResult SearchPost(string query)
 		{
+
+			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
+			{
+				
+			}
+			else
+			{
+				String UserIDS = Request.Cookies["UserID"];
+				int UserID = Convert.ToInt32(UserIDS);
+
+				FavoriteSuperheroDB DB = new FavoriteSuperheroDB();
+				var listFavvanUser = DB.GetFavoriteSuperheroesByUserID(UserID);
+				ViewBag.ListFavs = listFavvanUser;
+			}
+
 			List<Hero> results = new List<Hero>();
 
 			if (string.IsNullOrEmpty(query))
@@ -129,10 +159,19 @@ namespace Comic_Api.Controllers
 				ViewBag.ErrorMessage = "No results found.";
 			}
 
+			return View("Search", results);
+		}
+
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult SearchPost2(string query,int ID, bool Bool)
+		{
+			TempData["SearchQuery"] = query;
 			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
 			{
-				ViewBag.ErrorMessage = "Je moet eerst inloggen";
-				return View("Search", results);
+				ViewBag.ErrorMessage = "You must be logged in.";
+				return RedirectToAction("SearchEmpty");
 			}
 			else
 			{
@@ -141,22 +180,20 @@ namespace Comic_Api.Controllers
 
 				FavoriteSuperheroDB DB = new FavoriteSuperheroDB();
 				var listFavvanUser = DB.GetFavoriteSuperheroesByUserID(UserID);
-				bool alin = false;
-				foreach (var s in listFavvanUser)
-				{
-					if (s.SuperheroID == ID)
-					{
-						alin = true;
-						ViewBag.ErrorMessage = "Je hebt deze al gefavorit";
-					}
-				}
-				if (!alin) 
-				{DB.AddFavoriteSuperhero(UserID,ID);}
-				
+				ViewBag.ListFavs = listFavvanUser;
 
-				return View("Search", results);
+				
+				if (!Bool) 
+				{
+					DB.AddFavoriteSuperhero(UserID,ID);
+				}
+				else
+				{
+					DB.RemoveFavoriteSuperhero(UserID,ID);
+					//ViewBag.ErrorMessage = "Je zal deze unfavoriten";
+				}
+				return RedirectToAction("SearchEmpty");
 			}
-			
 		}
 	}
 }

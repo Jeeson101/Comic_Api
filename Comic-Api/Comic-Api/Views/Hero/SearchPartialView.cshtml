@@ -85,9 +85,29 @@
 			
 			@using (Html.BeginForm("SearchPost2", "Hero", FormMethod.Post))
 			{
-				@Html.Hidden("query", Model.name)
-				@Html.Hidden("ID", Model.id)
-				<button class="buttonFavorite" type="submit">Favorite</button>
+				bool erin = false;
+					foreach (FavoriteSuperhero hero in @ViewBag.ListFavs)
+					{
+						if (hero.SuperheroID == Model.id)
+						{
+							erin = true;
+						}
+					}
+
+					if (!erin)
+					{ 
+						@Html.Hidden("query", Model.name)
+						@Html.Hidden("ID", Model.id)
+					@Html.Hidden("Bool", erin)
+						<button class="buttonFavorite" type="submit">Favorite</button>
+					}
+					else
+					{
+					@Html.Hidden("query", Model.name)
+					@Html.Hidden("ID", Model.id)
+					@Html.Hidden("Bool", erin)
+					<button class="buttonFavorite" type="submit">UnFavorite</button>
+					}
 			}
 
 			@using (Html.BeginForm("Index", "ComicVine", FormMethod.Post))
