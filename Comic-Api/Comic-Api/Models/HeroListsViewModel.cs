@@ -1,8 +1,6 @@
-﻿using Core.ViewModel;
-
-namespace Comic_Api.Models
+﻿namespace Comic_Api.Models
 {
-	public class HeroListsViewModel : vmBase
+	public class HeroListsViewModel
 	{
 		private List<Hero> _heroesList1;
 		public List<Hero> HeroesList1
@@ -11,7 +9,6 @@ namespace Comic_Api.Models
 			set
 			{
 				_heroesList1 = value;
-				OnPropertyChange(nameof(HeroesList1));
 			}
 		}
 
@@ -22,7 +19,6 @@ namespace Comic_Api.Models
 			set
 			{
 				_heroesList2 = value;
-				OnPropertyChange(nameof(HeroesList2));
 			}
 		}
 	}

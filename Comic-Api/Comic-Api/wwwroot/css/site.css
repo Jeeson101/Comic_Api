@@ -55,7 +55,13 @@ body {
     border: 1px solid #FF0000;
 }
 
+.blue{
+    border: 1px solid #0000FF;
+}
 
+.gray{
+    border: 1px solid #808080;
+}
 
 .col-md-6 {
     width: auto;
@@ -321,6 +327,32 @@ body {
 .containerRight {
     top: 42px;
     right: 10px;
+}
+
+/*Aligment*/
+
+.AlignmentAligning
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.AlignmentContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 425px;
+    position: absolute;
+    top: 0;
+}
+
+.margin-10
+{
+    margin: 10px;
 }
 /*Footer*/
 footer {

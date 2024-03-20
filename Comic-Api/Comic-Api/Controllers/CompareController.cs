@@ -1,5 +1,4 @@
 ﻿using Comic_Api.Models;
-using Core.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
