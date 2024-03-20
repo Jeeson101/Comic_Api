@@ -80,10 +80,20 @@
 				}
 			}
 		</div>
-		@using (Html.BeginForm("Index", "Compare", FormMethod.Post, new { @class = "buttonCompare" }))
-		{
-			@Html.Hidden("id", Model.id)
-			<button type="submit">Compare</button>
-		}
+
+		<div class="row mt-4">
+			@using (Html.BeginForm("Index", "ComicVine", FormMethod.Post))
+			{
+				@Html.Hidden("heroName", Model.name)
+				<button class="buttonComic" type="submit">View Comics</button>
+			}
+
+			@using (Html.BeginForm("Index", "Compare", FormMethod.Post, new { @class = "buttonCompare" }))
+			{
+				@Html.Hidden("id", Model.id)
+				<button class="buttonCompare" type="submit">Compare</button>
+			}
+		</div>
+
 	</div>
 </div>

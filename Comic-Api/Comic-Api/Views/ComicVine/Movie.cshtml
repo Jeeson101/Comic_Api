@@ -16,7 +16,7 @@
 	@if (@Model != null)
 	{
 
-		if (!@Model._response.error.Equals("NotFound"))
+		if (@Model._response.error == null)
 			{
 				<div>
 				<h2>@Model._response.results.movie.name</h2>

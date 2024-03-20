@@ -1,7 +1,7 @@
 ﻿@model Comic_Api.Models.SuperheroComics 
 
 <div class="container">
-	<h1>Superhero Search Results</h1>
+	@* <h1>Superhero Search Results</h1>
 	<div class="row">
 		<div class="col-md-6">
 			<form asp-controller="ComicVine" asp-action="Index" method="post">
@@ -12,7 +12,8 @@
 				<button type="submit" class="btn btn-primary">Search</button>
 			</form>
 		</div>
-	</div>
+	</div> *@
+	<h3>Here you can view all the comics this hero has</h3>
 	@if(@Model != null)
 	{
 		if (!@Model._response.error.Equals("NotFound"))
@@ -28,6 +29,7 @@
 						<p><strong>Description:</strong> @Html.Raw(@v.description)</p>
 					</div>
 				}
+
 			}
 		}
 		else

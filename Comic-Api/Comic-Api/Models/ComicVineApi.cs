@@ -32,7 +32,7 @@ namespace Comic_Api.Models
    //     }
    public async Task<SuperheroComics> GetComicsByNameAsync(string name)
    {
-	   var url = $"https://comicvine.gamespot.com/api/volumes/?api_key={_apiKey}&filter=name:{name}&limit=1";
+	   var url = $"https://comicvine.gamespot.com/api/volumes/?api_key={_apiKey}&filter=name:{name}&limit=100";
 
 	   var request = new HttpRequestMessage(HttpMethod.Get, url);
 	   request.Headers.Add("User-Agent", "MyComicApp1.0");

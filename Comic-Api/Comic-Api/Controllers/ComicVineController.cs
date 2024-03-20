@@ -31,6 +31,7 @@ namespace Comic_Api.Ui.Mvc.Controllers
 			// Pass the retrieved data to the view
 			return View(superheroComics);
 		}
+		[HttpGet]
 		public IActionResult Movie()
 		{
 			return View();
