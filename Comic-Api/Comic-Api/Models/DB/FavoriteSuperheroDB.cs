@@ -12,7 +12,7 @@ namespace Comic_Api.Models.DB
         public FavoriteSuperheroDB()
         {
             // Set your SQL Server connection string here
-            this.connectionString = "Server=MSI\\VIVES;Database=SuperheroDB;Trusted_Connection=True;TrustServerCertificate=True";
+            this.connectionString = "Server=YES\\VIVES;Database=SuperheroDB;Trusted_Connection=True;TrustServerCertificate=True";
         }
 
         public List<FavoriteSuperhero> GetFavoriteSuperheroesByUserID(int userID)

@@ -10,7 +10,7 @@ namespace Comic_Api.Models.DB
         public UserDB()
         {
             //Hier moet je je sql server invoeren 
-            this.connectionString = "Server=MSI\\VIVES;Database=SuperheroDB;Trusted_Connection=True;TrustServerCertificate=True";
+            this.connectionString = "Server=YES\\VIVES;Database=SuperheroDB;Trusted_Connection=True;TrustServerCertificate=True";
         }
 
         public List<User> GetAllUsers()

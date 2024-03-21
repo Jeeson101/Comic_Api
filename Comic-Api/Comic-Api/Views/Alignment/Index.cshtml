@@ -1,0 +1,46 @@
+﻿@model Comic_Api.Models.AlignmentListModel;
+
+<div class="AlignmentPage">
+    <h3>Here you can see where heroes are aligned they are either good, bad, or aren't aligned. This is shown in the colors blue, red, and gray. <br /> You can also filter heroes based on their publisher.</h3>
+    <div class="dropdown">
+        <form asp-controller="Alignment" asp-action="FilterHeroes" method="post">
+            <select id="publisherDropdown" name="publisher" class="form-select">
+                <option value="">Select Publisher</option>
+                @foreach (var publisher in Model.Publishers)
+                {
+                    <option value="@publisher">@publisher</option>
+                }
+            </select>
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
+    </div>
+    <div class="AlignmentAligning">
+        <div class="AlignmentContainer containerLeft">
+            @foreach (var hero in Model.GoodHeroList)
+            {
+                <div class="comparedCharachterShow margin-10" style="color: @ViewBag.GoodColor;">
+                    <h2>@hero.name.First().ToString().ToUpper()@hero.name.Substring(1)</h2>
+                    <img src="@hero.images.xs" alt="@hero.name" class="img-fluid">
+                </div>
+            }
+        </div>
+        <div class="AlignmentContainer">
+            @foreach (var hero in Model.NeutralHeroList)
+            {
+                <div class="comparedCharachterShow margin-10" style="color: @ViewBag.NeutralColor;">
+                    <h2>@hero.name.First().ToString().ToUpper()@hero.name.Substring(1)</h2>
+                    <img src="@hero.images.xs" alt="@hero.name" class="img-fluid">
+                </div>
+            }
+        </div>
+        <div class="AlignmentContainer containerRight">
+            @foreach (var hero in Model.BadHeroList)
+            {
+                <div class="comparedCharachterShow margin-10" style="color: @ViewBag.BadColor;">
+                    <h2>@hero.name.First().ToString().ToUpper()@hero.name.Substring(1)</h2>
+                    <img src="@hero.images.xs" alt="@hero.name" class="img-fluid">
+                </div>
+            }
+        </div>
+    </div>
+</div>

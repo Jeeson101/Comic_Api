@@ -1,26 +1,3 @@
-/*html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}*/
-
 .Verkeerd {
     color: red;
 }
@@ -51,11 +28,36 @@ body {
     color: white;
 }
 
+.home-Images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.home-Images > .btn-primary{
+    max-width: 200px;
+    position: absolute;
+    bottom: 0;
+}
+
+.home-Images > img
+{
+    width: 300px;
+}
+
 .red {
     border: 1px solid #FF0000;
 }
 
 
+.blue {
+    border: 1px solid #0000FF;
+}
+
+.gray {
+    border: 1px solid #808080;
+}
 
 .col-md-6 {
     width: auto;
@@ -361,6 +363,29 @@ body {
 .containerRight {
     top: 42px;
     right: 10px;
+}
+
+/*Aligment*/
+
+.AlignmentAligning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.AlignmentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 425px;
+    position: absolute;
+    top: 0;
+}
+
+.margin-10 {
+    margin: 10px;
 }
 /*Footer*/
 footer {

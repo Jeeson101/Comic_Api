@@ -2172,19 +2172,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\milan\\.nuget\\packages\\": {}
+    "C:\\Users\\jason\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\milan\\OneDrive\\Documents\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj",
+      "projectUniqueName": "C:\\Users\\jason\\OneDrive\\Documenten\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj",
       "projectName": "Comic-Api",
-      "projectPath": "C:\\Users\\milan\\OneDrive\\Documents\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj",
-      "packagesPath": "C:\\Users\\milan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\milan\\OneDrive\\Documents\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\obj\\",
+      "projectPath": "C:\\Users\\jason\\OneDrive\\Documenten\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\Comic-Api.csproj",
+      "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jason\\OneDrive\\Documenten\\GitHub\\Comic_Api\\Comic-Api\\Comic-Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\milan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jason\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2204,6 +2204,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2238,7 +2243,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
