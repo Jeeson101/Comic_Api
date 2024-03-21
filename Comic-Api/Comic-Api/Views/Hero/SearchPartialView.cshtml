@@ -85,24 +85,27 @@
 		@using (Html.BeginForm("SearchPost2", "Hero", FormMethod.Post))
 		{
 			bool erin = false;
-			foreach (FavoriteSuperhero hero in ViewBag.ListFavs)
+			if (ViewBag.ListFavs != null)
 			{
-				if (hero.SuperheroID == Model.id)
+				foreach (FavoriteSuperhero hero in ViewBag.ListFavs)
 				{
-					erin = true;
+					if (hero.SuperheroID == Model.id)
+					{
+						erin = true;
+					}
 				}
 			}
 
 			if (!erin)
-			{ 
-				@Html.Hidden("query", Model.name)
+			{
+				@Html.Hidden("query", TempData["SearchQuery"])
 				@Html.Hidden("ID", Model.id)
 				@Html.Hidden("Bool", erin)
 				<button class="buttonFavorite" type="submit"><p>Favorite</p></button>
 			}
 			else
 			{
-				@Html.Hidden("query", Model.name)
+				@Html.Hidden("query", TempData["SearchQuery"])
 				@Html.Hidden("ID", Model.id)
 				@Html.Hidden("Bool", erin)
 				<button class="buttonUnFavorite" type="submit"><p>Un Favorite</p></button>

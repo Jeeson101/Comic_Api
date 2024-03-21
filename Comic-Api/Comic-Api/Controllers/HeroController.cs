@@ -11,6 +11,7 @@ namespace Comic_Api.Controllers
 	public class HeroController : Controller
 	{
 		private List<Hero> heroes;
+		private static String Methode = "";
 
 		public HeroController()
 		{
@@ -24,6 +25,7 @@ namespace Comic_Api.Controllers
 		public ActionResult Search(string query)
 		{
 			List<Hero> results = new List<Hero>();
+			Methode = "Search";
 
 			if (string.IsNullOrEmpty(query))
 			{
@@ -42,9 +44,13 @@ namespace Comic_Api.Controllers
 		[HttpGet]
 		public ActionResult SearchEmpty()
 		{
+			Methode = "searchEmpty";
 			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
 			{
-
+				if (TempData["Error"] != null)
+				{
+					ViewBag.ErrorMessage = TempData["Error"];
+				}
 			}
 			else
 			{
@@ -105,7 +111,7 @@ namespace Comic_Api.Controllers
 		[ValidateAntiForgeryToken]
 		public ActionResult SearchPost(string query)
 		{
-
+			Methode = "SearchPost";
 			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
 			{
 
@@ -167,10 +173,12 @@ namespace Comic_Api.Controllers
 		[ValidateAntiForgeryToken]
 		public ActionResult SearchPost2(string query, int ID, bool Bool)
 		{
+			
 			TempData["SearchQuery"] = query;
 			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
 			{
 				ViewBag.ErrorMessage = "You must be logged in.";
+				TempData["Error"] = "You must be logged in.";
 				return RedirectToAction("SearchEmpty");
 			}
 			else
@@ -186,19 +194,45 @@ namespace Comic_Api.Controllers
 				if (!Bool)
 				{
 					DB.AddFavoriteSuperhero(UserID, ID);
+					if (Methode.Equals("SearchFavoriteHeroesOnID"))
+					{
+						TempData["SearchQuery"] = null;
+					//	return RedirectToAction("SearchFavoriteHeroesOnID");
+					}
 				}
 				else
 				{
 					DB.RemoveFavoriteSuperhero(UserID, ID);
 					//ViewBag.ErrorMessage = "Je zal deze unfavoriten";
+					if (Methode.Equals("SearchFavoriteHeroesOnID"))
+					{
+						TempData["SearchQuery"] = null;
+						//return RedirectToAction("SearchFavoriteHeroesOnID");
+					}
 				}
 
-				return RedirectToAction("SearchEmpty");
+				//return RedirectToAction("SearchEmpty");
+				if (Methode != "")
+				{
+					if (Methode.Equals("SearchPost"))
+					{
+						return RedirectToAction("SearchEmpty");
+					}
+					else
+					{
+						return RedirectToAction(Methode);
+					}
+				}
+				else
+				{
+					return RedirectToAction("Search");
+				}
 			}
 		}
 
 		public ActionResult SearchFavoriteHeroesOnID()
 		{
+			Methode = "SearchFavoriteHeroesOnID";
 			if (string.IsNullOrEmpty(Request.Cookies["UserID"]))
 			{
 				ViewBag.ErrorMessage = "You need to be logged in.";

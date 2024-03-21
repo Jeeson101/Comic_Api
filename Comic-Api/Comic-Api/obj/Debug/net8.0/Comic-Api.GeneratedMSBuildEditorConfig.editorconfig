@@ -9,95 +9,95 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Comic_Api
 build_property.RootNamespace = Comic_Api
-build_property.ProjectDir = C:\Users\jason\OneDrive\Documenten\GitHub\Comic_Api\Comic-Api\Comic-Api\
+build_property.ProjectDir = C:\Users\milan\OneDrive\Documents\GitHub\Comic_Api\Comic-Api\Comic-Api\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\jason\OneDrive\Documenten\GitHub\Comic_Api\Comic-Api\Comic-Api
+build_property.MSBuildProjectDirectory = C:\Users\milan\OneDrive\Documents\GitHub\Comic_Api\Comic-Api\Comic-Api
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Alignment/ComboBoxPartialView.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Alignment/ComboBoxPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxpZ25tZW50XENvbWJvQm94UGFydGlhbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Alignment/HeroPartialView.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Alignment/HeroPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxpZ25tZW50XEhlcm9QYXJ0aWFsVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Alignment/Index.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Alignment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxpZ25tZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/ComicVine/Index.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/ComicVine/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29taWNWaW5lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/ComicVine/Movie.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/ComicVine/Movie.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29taWNWaW5lXE1vdmllLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/Compare.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/Compare.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxDb21wYXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/ComparePartialView.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/ComparePartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxDb21wYXJlUGFydGlhbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/HeroPartialView.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/HeroPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxIZXJvUGFydGlhbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/Index.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/ShowHeroPartialView.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Compare/ShowHeroPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFyZVxTaG93SGVyb1BhcnRpYWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Hero/Search.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Hero/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb1xTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Hero/SearchPartialView.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Hero/SearchPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb1xTZWFyY2hQYXJ0aWFsVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Home/Index.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Login/Index.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Login/Result.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Login/Result.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVzdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Login/SignUp.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Login/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU2lnblVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Shared/Error.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/_ViewImports.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/_ViewStart.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jason/OneDrive/Documenten/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Shared/_Layout.cshtml]
+[C:/Users/milan/OneDrive/Documents/GitHub/Comic_Api/Comic-Api/Comic-Api/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wj4c2ts8hl
